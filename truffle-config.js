@@ -1,8 +1,3 @@
-const path = require("path");
-
-
-
-
 module.exports = {
   networks: {
     development: {
@@ -14,4 +9,4 @@ module.exports = {
       type: "quorum" // needed for Truffle to support Quorum
     }
   }
- };
+};

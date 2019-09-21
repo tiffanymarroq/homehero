@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 
-
-
-
 class HomeData extends Component {
     constructor(props){
         super(props);
