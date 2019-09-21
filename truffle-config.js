@@ -1,12 +1,12 @@
-const path = require("path");
-
 module.exports = {
-  // See <http://truffleframework.com/docs/advanced/configuration>
-  // to customize your Truffle configuration!
-  contracts_build_directory: path.join(__dirname, "client/src/contracts"),
   networks: {
-    develop: {
-      port: 8545
+    development: {
+      host: "127.0.0.1",
+      port: 22000, // was 8545
+      network_id: "*", // Match any network id
+      gasPrice: 0,
+      gas: 4500000,
+      type: "quorum" // needed for Truffle to support Quorum
     }
   }
 };
