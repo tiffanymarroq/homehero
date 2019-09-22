@@ -76,9 +76,9 @@ class HomeData extends Component {
                 return this.state.user.history.commmunity[data][comData]
             })
 
-            let waterAvg = Math.ceil(waterSum/(waterData.length));
-            let comAvg = Math.ceil(comSum/(commmunityData.length));
-            let valueText = waterAvg + ' Gallons ';
+            let waterAvg = Math.ceil(waterSum/(waterData.length)) *3.5;
+            let comAvg = Math.ceil(comSum/(commmunityData.length)) *3.5;
+            let valueText = waterAvg + ' liters ';
             
             if(data === 'washingMachine'){
                 title = 'Washing Machine'

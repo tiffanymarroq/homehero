@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button} from 'reactstrap';
+import {Button, Table} from 'reactstrap';
 import TimeAgo from 'react-timeago';
 import {Line} from 'react-chartjs-2';
 
@@ -41,7 +41,7 @@ class mltraining extends Component {
 
     return (
         <div>
-            <h2>Activity Detected</h2>
+            <h2>Activity { this.state.statusCheck ? 'Recorded' : 'Detected'}</h2>
             {this.state.statusCheck ? 
               
               <div>
@@ -88,6 +88,40 @@ class mltraining extends Component {
                 </div>
             </div>
            }
+
+           <div>
+           <Table style={{marginTop:'30px'}}>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Activity</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Shower</td>
+            <td className="success">Confirmed</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Shower</td>
+            <td className="success">Confirmed</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Washing machine</td>
+            <td className="danger">Unconfirmed</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Dishes</td>
+            <td className="success">Confirmed</td>
+          </tr>
+        </tbody>
+      </Table>
+           </div>
         </div>
         )
     }

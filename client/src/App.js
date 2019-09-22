@@ -102,7 +102,7 @@ class App extends Component {
     if (this.state.currentState == 'dashboard') {
       return (
         <div className="App">
-          <h1 className='page-title'>Dashboard</h1>
+          <h1 className='page-title'>Tiffany's Home</h1>
           <Dashboard />
           {navBar}
         </div>
@@ -111,7 +111,7 @@ class App extends Component {
     if (this.state.currentState == 'machineLearning') {
       return (
         <div className="App">
-          <h1 className='page-title'>MACHINE LEARNING</h1>
+          <h1 className='page-title'>Tiffany's Habits</h1>
           <MLTraining timeStamp={this.state.timeStamp}/>
           {navBar}
         </div>
@@ -120,11 +120,21 @@ class App extends Component {
     if (this.state.currentState == 'incentives') {
       return (
         <div className="App">
-          <h1 className='page-title'>INCENTIVES</h1>
-          <Incentives return={()=>this.changeView('dashboard')} notification={this.state.notification} purchase={()=>this.purchase()}/>
+          <h1 className='page-title'>Tiffany's Rewards</h1>
+          <Incentives return={()=>this.changeView('dashboard_final')} notification={this.state.notification} purchase={()=>this.purchase()}/>
           {navBar}
         </div>
       )
+    }
+    if (this.state.currentState == 'dashboard_final') {
+      return (
+        <div className="App">
+          <h1 className='page-title'>Tiffany's Home</h1>
+          <h3>Great work Tiffany<br/> <span className="primary">A+ </span> Efficiency Rating<br/> <span className="success" >10%</span> higher than your neighbors</h3>
+          <Dashboard />
+          {navBar}
+        </div>
+      );
     }
   }
 }

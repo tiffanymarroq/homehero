@@ -63,6 +63,13 @@
 }
 
 
+.primary{
+  color: var(--primary)
+}
+.success{
+  color: var(--success)
+}
+
 
 
 button, .btn{
@@ -109,3 +116,5 @@ button, .btn{
   width: 75%;
   margin: 0 auto;
 }
+
+

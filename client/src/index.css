@@ -37,7 +37,7 @@ img{
   height: auto;
 }
 
-button{
+button, .btn{
   padding: 15px 40px;
   background-color: var(--dark-primary);
   border-radius: 3px;
@@ -50,7 +50,12 @@ button{
 }
 
 .destructive-btn{
-  background:   #db4537
+  background:   #db4537 !important;
+
+}
+
+.danger{
+  color : #db4537;
 }
 
 
