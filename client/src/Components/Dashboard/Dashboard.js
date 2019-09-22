@@ -13,7 +13,7 @@ class Dashboard extends Component{
     render(){
         return(
             <div>
-                <h2 className='page-title' >Dashboard</h2>
+                {/* <h2 className='page-title' >Dashboard</h2> */}
                 <UserData />
             </div>
         )

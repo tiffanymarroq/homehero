@@ -4,6 +4,7 @@ import getWeb3 from "./utils/getWeb3";
 import Dashboard from './Components/Dashboard/Dashboard';
 import Wave from './Components/Loading/Wave';
 import MLTraining from './Components/MLTraining/MLTraining';
+import Incentives from './Components/Incentives/Incentives';
 import {Row, Col, Button, ButtonGroup, ButtonToolbar } from 'reactstrap';
 import * as date from './Components/Date';
 
@@ -91,7 +92,7 @@ class App extends Component {
     if (this.state.currentState == 'dashboard') {
       return (
         <div className="App">
-          <h1>HOME HERO</h1>
+          <h1 className='page-title'>Dashboard</h1>
           <Dashboard />
           {navBar}
         </div>
@@ -100,7 +101,7 @@ class App extends Component {
     if (this.state.currentState == 'machineLearning') {
       return (
         <div className="App">
-          <h1>MACHINE LEARNING</h1>
+          <h1 className='page-title'>MACHINE LEARNING</h1>
           <MLTraining timeStamp={this.state.timeStamp}/>
           {navBar}
         </div>
@@ -109,7 +110,8 @@ class App extends Component {
     if (this.state.currentState == 'incentives') {
       return (
         <div className="App">
-          <h1>INCENTIVES</h1>
+          <h1 className='page-title'>INCENTIVES</h1>
+          <Incentives />
           {navBar}
         </div>
       )

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Be+Vietnam:400,700&display=swap');
-
+/* @import './node_modules/bootstrap/dist/css/bootstrap.css'; */
 body {
   margin: 0;
   padding: 0;
@@ -35,4 +35,13 @@ code {
 img{
   width: 100%;
   height: auto;
+}
+
+button{
+  padding: 10px 30px;
+  background-color: var(--dark-primary);
+  border-radius: 3px;
+  display: block;
+  margin: 15px auto;
+  color: #fff;
 }

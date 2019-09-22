@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import {Bar} from 'react-chartjs-2';
+import {Line} from 'react-chartjs-2';
 import './UserData.css';
 
 class HomeData extends Component {
@@ -56,18 +56,24 @@ class HomeData extends Component {
             return (
                 <div className="water-card">
                     <p className="bold card-title">{title}</p>
-                    {/* <Bar
-                        data={this.state.user.history.personal[data]}
-                        width={100}
-                        height={50}
-                        options={{ maintainAspectRatio: false }}
-                    /> */}
+                   
                 </div> 
             )
         })
         return(
             <div>
                 {waterCard}
+                {/* <Line
+                        data={ [{
+                            x: 10,
+                            y: 20
+                        }, {
+                            x: 15,
+                            y: 10
+                        }]}
+                        width={100}
+                        height={50}
+                        options={{ maintainAspectRatio: false }}  /> */}
             </div>
         )
     }
