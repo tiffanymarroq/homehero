@@ -13,7 +13,7 @@ class HomeData extends Component {
                             800 : 6,
                             1200: 30,
                             1500 : 8,
-                            18: 40
+                            1800: 40
                         },
                         washingMachine : {
                             600 : 6,
@@ -27,7 +27,7 @@ class HomeData extends Component {
                         },
                        
                     },
-                    'commmunity' : {
+                    commmunity : {
                         bathroom : {
                             800 : 6,
                             1200: 20,
@@ -43,7 +43,6 @@ class HomeData extends Component {
                         dishwasher : {
                             800 : 10,
                             1200 : 13,
-
                             1800 : 18,
                         },
                        
@@ -58,29 +57,59 @@ class HomeData extends Component {
     render(){
         let waterCard = Object.keys(this.state.user.history.personal).map( (data,i) => {
             let title = data;
-            let labels = []
+            let labels = [];
+            let waterSum = 0;
+            let comSum = 0
             let waterData = Object.keys(this.state.user.history.personal[data]).map( waterData => {
                 labels.push(waterData)
+                waterSum+=this.state.user.history.personal[data][waterData]
                 return this.state.user.history.personal[data][waterData]
             })
-            console.log(waterData)
-            console.log(labels)
+            let commmunityData = Object.keys(this.state.user.history.commmunity[data]).map( comData => {
+                comSum += this.state.user.history.commmunity[data][comData];
+                return this.state.user.history.commmunity[data][comData]
+            })
+
+            let waterAvg = Math.ceil(waterSum/(waterData.length));
+            let comAvg = Math.ceil(comSum/(commmunityData.length));
+
+        
             if(data === 'washingMachine'){
                 title = 'Washing Machine'
             }
             return (
                 <div className="water-card">
-                    <p className="bold card-title">{title}</p>
+                    <p className="bold card-title">{title} | {waterAvg}</p>
                     <Line
                        data = {{
-                            
                             datasets: [{
-                                data: waterData,
-                                label: 'Water Used (gallon)',
-                                borderColor: ['#4A0080'],
-                                backgroundColor: ['rgba(74,0,128,.2)']
-                            }],
-                            labels: labels
+                                data:waterData ,
+                                label: 'Personal ',
+                                borderColor: ['#1F00A7'],
+                                backgroundColor: ['rgba(15,127,226,0)']
+                            },
+                            {
+                                data: commmunityData ,
+                                label: 'Community',
+                                borderColor: ['#41C3F2'],
+                                backgroundColor: ['rgba(15,127,226,0)']
+                            }
+                            ],
+                            labels: labels,
+                            options: {
+                                scales: {
+                                    xAxes: [{
+                                      gridLines: {
+                                        show: true
+                                      }
+                                    }],
+                                    yAxes: [{
+                                      gridLines: {
+                                        show: false
+                                      }
+                                    }]
+                                  }
+                            }
                         }}
                      
                         />

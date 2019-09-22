@@ -45,3 +45,8 @@ button{
   margin: 15px auto;
   color: #fff;
 }
+
+
+.bold{
+  font-weight: 700;
+}

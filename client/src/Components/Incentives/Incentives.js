@@ -7,9 +7,19 @@ const Incentives = (props) => {
         <div className='rewards'>
             <p>You've earned 40 points!</p>
             <div className="water-card">
-            <p className="bold">Tide pods</p>
-            IMAGE
-            <Button>Claim it!</Button>
+                <p className="bold">Tide pods</p>
+                IMAGE
+                <Button>Claim it!</Button>
+            </div>
+            <div className="water-card">
+                <p className="bold">Gain</p>
+                IMAGE
+                <Button>Claim it!</Button>
+            </div>
+            <div className="water-card">
+                <p className="bold">Tide Detergent</p>
+                IMAGE
+                <Button>Claim it!</Button>
             </div>
 
         </div>
