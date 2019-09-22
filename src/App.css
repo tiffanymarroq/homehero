@@ -24,7 +24,14 @@
 
 .App-footer {
   bottom: 0;
-  position: absolute; 
+  position: absolute;
+  display: inline-grid;
+}
+
+.App-toolbar{
+  width: 100%;
+  position: relative;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
