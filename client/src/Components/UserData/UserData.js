@@ -68,7 +68,6 @@ class HomeData extends Component {
     }
 
     render(){
-        console.log('state', this.state)
         let waterCard = Object.keys(this.state.user.history.personal).map( (data,i) => {
             console.log(this.state.user.history.personal[data])
             let title = data;
