@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
 .App-logo {
@@ -24,8 +25,39 @@
 
 .App-footer {
   bottom: 0;
-  position: absolute; 
+  position: fixed; 
+  width:100%;
+  background-color: var(--primary);
+  padding: 10px 0;
 }
+
+.App-toolbar{
+  /* width:100%; */
+  position: relative;
+  margin: 0 15px;
+
+}
+.App-toolbar .btn{
+  background: transparent;
+}
+
+.App-toolbar .btn i{
+font-size: 22px;
+}
+
+.App-toolbar .btn-group{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+button{
+  outline: none;
+  border: none;
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -34,4 +66,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.logo-image {
+  width: 100%;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
 }
