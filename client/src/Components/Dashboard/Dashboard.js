@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import UserData from '../UserData';
+import UserData from '../UserData/UserData';
 
 class Dashboard extends Component{
 
@@ -13,7 +13,7 @@ class Dashboard extends Component{
     render(){
         return(
             <div>
-                <h4 className='page-title' >Dashboard</h4>
+                <h2 className='page-title' >Dashboard</h2>
                 <UserData />
             </div>
         )

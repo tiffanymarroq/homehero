@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Be+Vietnam:400,700&display=swap');
 
 body {
   margin: 0;
@@ -7,7 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  font-family: 'Open Sans', Arial, "Helvetica Neue", sans-serif;
+  font-family: 'Be Vietnam', Arial, "Helvetica Neue", sans-serif;
   
 }
 
@@ -24,5 +24,12 @@ code {
   --secondary: #4A0080;
 }
 
+
+.App{
+ width: 100%;
+ max-width: 400px;
+ margin: 0 auto;
+ display: block;
+}
 
 
