@@ -33,7 +33,7 @@
   position: fixed; 
   width:100%;
   background-color: var(--primary);
-  padding: 15px 0px;
+  /* padding: 15px 0px; */
   margin-left: -1px;
   max-width: 400px;
 }
@@ -82,5 +82,11 @@ button{
   left: 50%;
   margin-top: 25%;
   max-width: 300px;
-  /* transform: translateX(-50%); */
+}
+
+.page-title{
+  margin-bottom: 40px;
+  margin-top: 0;
+  padding: 25px 15px;
+  border-bottom: 3px solid var(--primary);
 }
