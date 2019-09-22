@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Bar} from 'react-chartjs-2';
+// import {Bar} from 'react-chartjs-2';
 import './UserData.css';
 
 class HomeData extends Component {
@@ -69,7 +69,6 @@ class HomeData extends Component {
 
     render(){
         let waterCard = Object.keys(this.state.user.history.personal).map( (data,i) => {
-            console.log(this.state.user.history.personal[data])
             let title = data;
             if(data === 'washingMachine'){
                 title = 'Washing Machine'
@@ -77,12 +76,12 @@ class HomeData extends Component {
             return (
                 <div className="water-card">
                     <p className="bold card-title">{title}</p>
-                    <Bar
+                    {/* <Bar
                         data={this.state.user.history.personal[data]}
                         width={100}
                         height={50}
                         options={{ maintainAspectRatio: false }}
-                    />
+                    /> */}
                 </div> 
             )
         })

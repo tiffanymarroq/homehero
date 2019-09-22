@@ -32,6 +32,7 @@
   width:100%;
   background-color: var(--primary);
   padding: 10px 0;
+  max-width: 400px;
 }
 
 .App-toolbar{
@@ -76,5 +77,6 @@ button{
   width: 100%;
   left: 50%;
   top: 20%;
+  max-width: 300px;
   /* transform: translateX(-50%); */
 }
