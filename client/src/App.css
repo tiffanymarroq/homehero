@@ -4,6 +4,7 @@
   margin: 0 auto;
   display: block;
   max-width: 400px;
+  min-height: 700px;
 }
 
 .App-logo {
@@ -28,21 +29,24 @@
 
 .App-footer {
   bottom: 0;
+  /* left: 0; */
   position: fixed; 
   width:100%;
   background-color: var(--primary);
-  padding: 10px 0;
+  padding: 15px 0px;
+  margin-left: -1px;
   max-width: 400px;
 }
 
 .App-toolbar{
   /* width:100%; */
   position: relative;
-  margin: 0 15px;
+  /* margin: 0 15px; */
 
 }
 .App-toolbar .btn{
   background: transparent;
+  width: 33%;
 }
 
 .App-toolbar .btn i{
@@ -76,7 +80,7 @@ button{
 .logo-image {
   width: 100%;
   left: 50%;
-  top: 20%;
+  margin-top: 25%;
   max-width: 300px;
   /* transform: translateX(-50%); */
 }

@@ -11,7 +11,7 @@ class HomeData extends Component {
                     personal: {
                         washingMachine : {
                             600 : 6,
-                            601 : 8,
+                            100 : 10,
                         },
                         dishwasher : {
                             800 : 15,
@@ -27,7 +27,7 @@ class HomeData extends Component {
                     'commmunity' : {
                         washingMachine : {
                             600 : 6,
-                            601 : 8,
+                            100 : 15,
                         },
                         dishwasher : {
                             800 : 10,
@@ -45,27 +45,7 @@ class HomeData extends Component {
         }
     }
 
-    componentDidMount = async() => {
-        // let data = await fetch('./data/waterData/homeData114.json')
-        // .then(response => response.json())
-        // .then((jsonData) => {
-        //   // jsonData is parsed json object received from url
-        //     this.setState({
-        //         data: jsonData
-        //     }, () => {
-                
-        //         console.log(this.state.data, 'DATA')
-        //         let startTimeStr = jsonData[0].localminute.split(' ');
-        //         let endTimeStr = jsonData[jsonData.length - 1].localminute.split(' ');
-        //         this.setState({
-        //             startTime: startTimeStr[1],
-        //             endTime: endTimeStr[1]
-        //         })
-
-        //     })
-        // })
-        // .catch( err => console.log(err))
-    }
+ 
 
     render(){
         let waterCard = Object.keys(this.state.user.history.personal).map( (data,i) => {
@@ -87,7 +67,6 @@ class HomeData extends Component {
         })
         return(
             <div>
-                <p className="text-left">6:00 AM - 6:00 PM</p>
                 {waterCard}
             </div>
         )
