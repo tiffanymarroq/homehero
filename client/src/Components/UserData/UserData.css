@@ -1,0 +1,13 @@
+.water-card{
+    border-radius: 6px;
+    box-shadow: 1px 1px 8px rgba(	15, 162,0226, 0.25);
+    padding: 10px 15px; 
+    margin: 30px 15px;
+}
+
+.card-title{
+    text-align: left;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: .75px;
+}

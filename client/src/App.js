@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import NightUpload from "./build/contracts/NightUpload.json";
 import getWeb3 from "./utils/getWeb3";
-import HomeData from './Components/HomeData';
+import Dashboard from './Components/Dashboard/Dashboard';
 import Wave from './Components/Loading/Wave';
 import MLTraining from './Components/MLTraining/MLTraining';
 import {Row, Col, Button } from 'reactstrap';
@@ -82,6 +82,7 @@ class App extends Component {
       return (
         <div className="App">
           <h1>HOME HERO</h1>
+          <Dashboard />
           {navBar}
         </div>
       );
