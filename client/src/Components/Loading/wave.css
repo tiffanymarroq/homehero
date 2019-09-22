@@ -5,14 +5,15 @@
   position:absolute;
   bottom:0;
   left:0;
-  background: #0F7FE2;
-  /* overflow: hidden; */
+  /* background: #0F7FE2; */
+  overflow: hidden;
+  height: 200px;
 }
 
 .wave {
   background: url(/Assets/waveNew.svg) repeat-x;
   position: absolute;
-  top: -198px;
+  top: 30px;
   width: 6400px;
   height: 198px;
   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
@@ -20,7 +21,7 @@
 }
 
 .wave:nth-of-type(2) {
-  top: -175px;
+  top: 30px;
   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
   opacity: 1;
 }
@@ -43,9 +44,9 @@
   }
 }
 
-.logo-image{
+/* .logo-image{
   top: 15%;
   left: 37%;
   width: 400px;
   position: absolute;
-}
+} */

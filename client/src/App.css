@@ -42,7 +42,8 @@
 }
 
 .App-toolbar .btn i{
-font-size: 22px;
+  font-size: 22px;
+  color: #fff;
 }
 
 .App-toolbar .btn-group{
@@ -72,5 +73,5 @@ button{
   width: 100%;
   left: 50%;
   top: 20%;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
 }
