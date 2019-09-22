@@ -4,7 +4,8 @@ import getWeb3 from "./utils/getWeb3";
 import Dashboard from './Components/Dashboard/Dashboard';
 import Wave from './Components/Loading/Wave';
 import MLTraining from './Components/MLTraining/MLTraining';
-import {Row, Col, Button } from 'reactstrap';
+import {Row, Col, Button, ButtonGroup, ButtonToolbar } from 'reactstrap';
+import * as date from './Components/Date';
 
 import "./App.css";
 class App extends Component {
@@ -14,14 +15,15 @@ class App extends Component {
     accounts: null, 
     contract: null,
     currentState: 'loading',
-    selectedAction: ''
-    //loading, dashboard, machine learning, incentives
+    selectedAction: '',
+    timeStamp: null
   };
 
   componentDidMount = async () => {
     this.setState({
       currentState: 'loading'
     })
+    let now = date.fullDateTime();
     try {
       const web3 = await getWeb3();
       const accounts = await web3.eth.getAccounts();
@@ -34,7 +36,8 @@ class App extends Component {
       this.setState({ 
         web3, 
         accounts, 
-        contract: instance 
+        contract: instance,
+        timeStamp: now
       }, this.runExample)
     } catch (error) {
       alert(
@@ -50,6 +53,12 @@ class App extends Component {
     })
   }
 
+  changeView=(state)=>{
+    this.setState({
+      currentState: state
+    })
+  }
+
   runExample = async () => {
     const { accounts, contract } = this.state;
     await contract.methods.set(5).send({ from: accounts[0] });
@@ -62,14 +71,15 @@ class App extends Component {
   };
 
   render() {
-
     const navBar = (
       <div className="App-footer">
-        <Row>
-          <Col sm={{size: 4}}><i onClick={()=>{}}class="fas fa-chart-line"></i></Col>
-          <Col sm={{size: 4}}><i class="fas fa-robot"></i></Col>
-          <Col sm={{size: 4}}><i class="fas fa-hand-holding-heart"></i></Col>
-        </Row>
+        <ButtonToolbar className="App-toolbar">
+          <ButtonGroup>
+            <Button onClick={()=>{this.changeView('dashboard')}}><i class="fas fa-chart-line"></i></Button>
+            <Button onClick={()=>{this.changeView('machineLearning')}}><i class="fas fa-robot"></i></Button>
+            <Button onClick={()=>{this.changeView('incentives')}}><i class="fas fa-hand-holding-heart"></i></Button>
+          </ButtonGroup>
+        </ButtonToolbar>
       </div>
     )
 
@@ -90,7 +100,8 @@ class App extends Component {
     if (this.state.currentState == 'machineLearning') {
       return (
         <div className="App">
-          <MLTraining />
+          <h1>MACHINE LEARNING</h1>
+          <MLTraining timeStamp={this.state.timeStamp}/>
           {navBar}
         </div>
       )
@@ -98,13 +109,12 @@ class App extends Component {
     if (this.state.currentState == 'incentives') {
       return (
         <div className="App">
-          <h1>Incentives</h1>
+          <h1>INCENTIVES</h1>
           {navBar}
         </div>
       )
     }
   }
-
 }
 
 export default App;

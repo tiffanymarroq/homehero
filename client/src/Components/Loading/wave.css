@@ -5,11 +5,11 @@
   position:absolute;
   bottom:0;
   left:0;
-  background: #015871;
+  background: #0F7FE2;
 }
 
 .wave {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  background: url(/Assets/waveNew.svg) repeat-x;
   position: absolute;
   top: -198px;
   width: 6400px;
@@ -40,4 +40,11 @@
   50% {
     transform: translate3d(0,5px,0);
   }
+}
+
+.logo-image{
+  top: 15%;
+  left: 37%;
+  width: 400px;
+  position: absolute;
 }
