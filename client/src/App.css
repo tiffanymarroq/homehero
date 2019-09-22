@@ -65,9 +65,13 @@
 
 
 
-button{
+button, .btn{
   outline: none;
   border: none;
+  display: block;
+  margin: 10px auto;
+  background: var(--dark-primary);
+  padding: 10px 20px;
 }
 
 

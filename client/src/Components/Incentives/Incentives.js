@@ -1,10 +1,28 @@
 import React from 'react';
-import {Button} from 'reactstrap';
+import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
 const Incentives = (props) => {
 
+    let notification = props.notification;
+    let showModal = false;
+    if (notification){
+        showModal = true
+    }
+
+    
+
     return (
         <div className='rewards'>
+            <Modal isOpen={showModal}>
+          <ModalHeader>Purchase Confirmed</ModalHeader>
+          <ModalBody>
+            Your order is available at your local CVS. Keep conserving!
+            <img src='/Assets/cvs.png'/>
+          </ModalBody>
+          <ModalFooter>
+            <Button onClick={()=>props.return()} color="primary">Clear</Button>{' '}
+          </ModalFooter>
+        </Modal>
             <p>You've earned 40 points!</p>
             <div className="water-card">
             <div className='card-title'>
@@ -13,7 +31,7 @@ const Incentives = (props) => {
             </div>
         
                 <img className="img-product" src="/Assets/tide-pods.webp"/>
-                <Button>Claim it!</Button>
+                <Button onClick={()=>props.purchase()}>Claim it!</Button>
             </div>
             <div className="water-card">
             <div className='card-title'>

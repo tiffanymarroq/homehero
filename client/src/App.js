@@ -71,16 +71,26 @@ class App extends Component {
     });
   };
 
+  purchase = async () => {
+    let web3 = this.state.web3;
+    let contract = this.state.contract;
+    let accounts = this.state.accounts;
+    await contract.methods.set(5).send({ from: accounts[0] });
+    this.setState({
+      notification: "purchase confirmed"
+    })
+  }
+
   render() {
     const navBar = (
       <div className="App-footer">
-        <ButtonToolbar className="App-toolbar">
+        <div className="App-toolbar">
           <ButtonGroup>
             <Button onClick={()=>{this.changeView('dashboard')}}><i class="fas fa-chart-line"></i></Button>
             <Button onClick={()=>{this.changeView('machineLearning')}}><i class="fas fa-robot"></i></Button>
             <Button onClick={()=>{this.changeView('incentives')}}><i class="fas fa-hand-holding-heart"></i></Button>
           </ButtonGroup>
-        </ButtonToolbar>
+        </div>
       </div>
     )
 
@@ -111,7 +121,7 @@ class App extends Component {
       return (
         <div className="App">
           <h1 className='page-title'>INCENTIVES</h1>
-          <Incentives />
+          <Incentives return={()=>this.changeView('dashboard')} notification={this.state.notification} purchase={()=>this.purchase()}/>
           {navBar}
         </div>
       )
