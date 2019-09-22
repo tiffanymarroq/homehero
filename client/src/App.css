@@ -5,8 +5,10 @@
   display: block;
   max-width: 400px;
   min-height: 700px;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
+
+  
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -90,4 +92,16 @@ button{
   margin-top: 0;
   padding: 25px 15px;
   border-bottom: 3px solid var(--primary);
+}
+
+.ml-btn{
+  display: flex;
+  justify-content: space-evenly;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.ml-img{
+  width: 75%;
+  margin: 0 auto;
 }

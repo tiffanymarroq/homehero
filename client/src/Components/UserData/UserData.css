@@ -1,6 +1,6 @@
 .water-card{
     border-radius: 6px;
-    box-shadow: 1px 1px 8px rgba(	15, 162,0226, 0.25);
+    box-shadow: 1px 1px 8px rgba(15, 162,0226, 0.25);
     padding: 10px 15px; 
     margin: 30px 15px;
 }
@@ -10,4 +10,21 @@
     font-weight: 700;
     text-transform: capitalize;
     letter-spacing: .75px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-content: center;
+    align-items: center;
 }
+
+
+.img-product{
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .value{
+    color: var(--mid-primary);
+
+  }

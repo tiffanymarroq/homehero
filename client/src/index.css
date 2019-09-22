@@ -38,15 +38,25 @@ img{
 }
 
 button{
-  padding: 10px 30px;
+  padding: 15px 40px;
   background-color: var(--dark-primary);
   border-radius: 3px;
   display: block;
   margin: 15px auto;
   color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+
+}
+
+.destructive-btn{
+  background:   #db4537
 }
 
 
 .bold{
   font-weight: 700;
+  font-size: 18px;
+  text-align: left;
 }
+
